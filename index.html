@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zainah Kids Shop offers premium kids fashion, shoes and accessories with fast WhatsApp ordering in Kamakis Karuguru, Nairobi.">
+  <title>Zainah Kids Shop</title>
+  <style>
+    :root {
+      --pink: #ff5d92;
+      --pink-dark: #e64c7c;
+      --pink-soft: #fff2f7;
+      --text: #2f2333;
+      --muted: #6d5868;
+      --cream: #fffafc;
+      --white: #ffffff;
+      --shadow: 0 16px 40px rgba(255, 93, 146, 0.15);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 93, 146, 0.12), transparent 24%),
+        linear-gradient(135deg, #fffafc 0%, #ffffff 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea { font: inherit; }
+
+    .container { width: min(1160px, 92%); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 93, 146, 0.12);
+      color: var(--pink-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 250, 252, 0.88);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .logo-img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 16px;
+      background: var(--white);
+      padding: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--pink-dark); }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--pink) 0%, #ff7d7d 100%);
+      color: var(--white);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-toggle {
+      display: none;
+      border: 0;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 54px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p { font-size: 1.04rem; color: var(--muted); max-width: 660px; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0 16px;
+    }
+
+    .btn, .btn-secondary, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--pink) 0%, #ff7d7d 100%);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--pink-dark);
+      border-color: rgba(255, 93, 146, 0.2);
+    }
+
+    .btn-ghost {
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+    }
+
+    .btn:hover, .btn-secondary:hover, .btn-ghost:hover { transform: translateY(-2px); }
+
+    .trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .trust-pills span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 8px 20px rgba(255, 93, 146, 0.08);
+    }
+
+    .hero-card {
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 93, 146, 0.11) 0%, rgba(255, 255, 255, 0.92) 100%);
+      border-radius: 32px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, transparent 0%, rgba(255,255,255,0.35) 100%);
+      pointer-events: none;
+    }
+
+    .hero-stack {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+    }
+
+    .hero-stack img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .hero-stack img:nth-child(2) { transform: translateY(18px); }
+    .hero-stack img:nth-child(3) { transform: translateY(-16px); }
+
+    .floating-badge {
+      position: absolute;
+      background: var(--white);
+      padding: 12px 14px;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      font-weight: 700;
+      color: var(--pink-dark);
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+    }
+
+    .floating-badge.bottom { top: auto; bottom: 16px; left: auto; right: 16px; }
+
+    .service-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 10px auto 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(255, 93, 146, 0.08);
+      border: 1px solid rgba(255, 93, 146, 0.1);
+    }
+
+    .service-card strong { display: block; margin-bottom: 6px; color: var(--pink-dark); }
+
+    .section-title {
+      font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border-radius: 999px;
+      padding: 10px 14px;
+      min-width: min(320px, 100%);
+      box-shadow: 0 10px 24px rgba(255, 93, 146, 0.08);
+      border: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .search-box input {
+      border: 0;
+      background: transparent;
+      outline: none;
+      width: 100%;
+      color: var(--text);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--pink) 0%, #ff7d7d 100%);
+      color: var(--white);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 93, 146, 0.12);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover { transform: translateY(-3px); }
+    .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .card-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .card-body h3 { font-size: 1.08rem; }
+    .card-body p { color: var(--muted); font-size: 0.95rem; }
+    .card-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .price { color: var(--pink-dark); font-weight: 800; }
+    .badge { display: inline-flex; width: fit-content; padding: 6px 10px; border-radius: 999px; background: var(--pink-soft); color: var(--pink-dark); font-size: 0.8rem; font-weight: 700; }
+
+    .card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .mini-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 700;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+    }
+    .mini-btn.primary { background: linear-gradient(135deg, var(--pink) 0%, #ff7d7d 100%); color: var(--white); }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+    }
+
+    .panel {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .stat-box {
+      border-radius: 18px;
+      background: var(--pink-soft);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-box strong { display: block; font-size: 1.3rem; color: var(--pink-dark); }
+
+    .quiz-form { display: grid; gap: 12px; margin-top: 14px; }
+    .quiz-form select, .quiz-form input, .quiz-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 93, 146, 0.2);
+      border-radius: 14px;
+      background: var(--cream);
+      color: var(--text);
+      outline: none;
+    }
+    #quizResult { margin-top: 14px; padding: 14px; border-radius: 16px; background: var(--pink-soft); color: var(--text); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid rgba(255, 93, 146, 0.08);
+    }
+    .testimonial strong { color: var(--pink-dark); display: block; margin-top: 10px; }
+
+    .order-card {
+      background: linear-gradient(135deg, rgba(255, 93, 146, 0.08) 0%, rgba(255,255,255,0.96) 100%);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0 20px;
+    }
+
+    .step {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 24px rgba(255, 93, 146, 0.08);
+    }
+    .step strong { display: block; color: var(--pink-dark); margin-bottom: 6px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(255, 93, 146, 0.08);
+      text-align: center;
+    }
+
+    .contact-card h3 { color: var(--pink-dark); margin-bottom: 8px; }
+
+    .floating-cart {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--pink) 0%, #ff7d7d 100%);
+      color: var(--white);
+      padding: 12px 16px;
+      box-shadow: 0 16px 32px rgba(255, 93, 146, 0.25);
+      cursor: pointer;
+      font-weight: 800;
+      z-index: 50;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 76px;
+      transform: translateX(-50%) translateY(12px);
+      opacity: 0;
+      background: #222;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 999px;
+      transition: all .25s ease;
+      z-index: 60;
+      pointer-events: none;
+      font-weight: 600;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: all .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    footer {
+      padding: 28px 0 56px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .empty-state {
+      padding: 28px;
+      text-align: center;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      color: var(--muted);
+    }
+
+    .admin-trigger {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .admin-shell {
+      padding: 24px 0 0;
+    }
+
+    .admin-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 93, 146, 0.12);
+      margin-bottom: 18px;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .admin-panel {
+      background: var(--cream);
+      border-radius: 22px;
+      padding: 18px;
+      border: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .admin-panel-space {
+      margin-top: 18px;
+    }
+
+    .admin-toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .admin-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .admin-item {
+      background: var(--white);
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 93, 146, 0.12);
+    }
+
+    .admin-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .admin-actions button, .admin-actions a {
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-weight: 700;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+    }
+
+    .admin-message { margin-top: 10px; font-weight: 700; color: var(--pink-dark); }
+    .small { font-size: 0.9rem; color: var(--muted); }
+    .admin-form { display: grid; gap: 10px; }
+    .admin-form input, .admin-form select, .admin-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 93, 146, 0.2);
+      background: var(--white);
+      color: var(--text);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .form-message {
+      margin-top: 12px;
+      color: var(--pink-dark);
+      font-weight: 700;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .promo-grid, .admin-grid { grid-template-columns: 1fr; }
+      .service-strip, .steps-grid, .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 4%;
+        right: 4%;
+        background: var(--white);
+        padding: 14px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; }
+      .mobile-toggle { display: inline-flex; align-items: center; justify-content: center; }
+      .hero { padding-top: 24px; }
+      .hero-stack { grid-template-columns: 1fr; }
+      .hero-stack img:nth-child(2), .hero-stack img:nth-child(3) { transform: none; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .toolbar { align-items: stretch; }
+      .search-box { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="images/logo.png.jpeg" alt="Zainah Kids Shop logo" class="logo-img">
+        <span>Zainah Kids Shop</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="admin-trigger" id="adminTrigger" type="button">Admin</button>
+        <a class="nav-pill" href="https://wa.me/254769582842">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="admin-shell container" id="adminShell" hidden>
+    <div class="admin-card" id="adminLoginCard">
+      <p class="eyebrow">Admin access</p>
+      <h3>Manage products, stock, orders and enquiries</h3>
+      <form id="adminLoginForm" class="quiz-form">
+        <input id="adminUsername" type="text" placeholder="Username" required>
+        <input id="adminPassword" type="password" placeholder="Password" required>
+        <button class="btn" type="submit">Log in</button>
+      </form>
+      <div id="adminLoginMessage" class="admin-message"></div>
+    </div>
+
+    <div class="admin-card" id="adminDashboard" hidden>
+      <div class="admin-toolbar">
+        <div>
+          <p class="eyebrow">Admin control</p>
+          <h3>Website manager</h3>
+        </div>
+        <button class="btn-secondary" id="adminLogoutBtn" type="button">Logout</button>
+      </div>
+
+      <div id="adminSummary" class="stats-grid"></div>
+
+      <div class="admin-grid">
+        <div class="admin-panel">
+          <h4>Add or update a product</h4>
+          <form id="productForm" class="admin-form">
+            <input id="productTitle" type="text" placeholder="Product title" required>
+            <textarea id="productDesc" rows="2" placeholder="Description"></textarea>
+            <input id="productPrice" type="number" min="0" step="50" placeholder="Price">
+            <select id="productCategory">
+              <option value="Outfits">Outfits</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Bundles">Bundles</option>
+            </select>
+            <input id="productStock" type="number" min="0" step="1" placeholder="Stock">
+            <input id="productImage" type="text" placeholder="Image path">
+            <input id="productBadge" type="text" placeholder="Badge">
+            <label class="small"><input id="productFeatured" type="checkbox"> Featured on homepage</label>
+            <div class="admin-actions">
+              <button class="btn" type="submit">Save product</button>
+              <button class="btn-secondary" id="resetProductBtn" type="button">Reset</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="admin-panel">
+          <h4>Products & stock</h4>
+          <div id="adminProductList" class="admin-list"></div>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <div class="admin-panel">
+          <h4>Orders</h4>
+          <div id="adminOrdersList" class="admin-list"></div>
+        </div>
+        <div class="admin-panel">
+          <h4>Enquiries</h4>
+          <div id="adminEnquiriesList" class="admin-list"></div>
+        </div>
+      </div>
+
+      <div class="admin-panel admin-panel-space">
+        <h4>Site settings</h4>
+        <form id="settingsForm" class="admin-form">
+          <input id="settingsHeroTitle" type="text" placeholder="Hero title">
+          <textarea id="settingsHeroDesc" rows="2" placeholder="Hero description"></textarea>
+          <input id="settingsWhatsapp" type="text" placeholder="WhatsApp number">
+          <input id="settingsLocation" type="text" placeholder="Location">
+          <input id="settingsEmail" type="text" placeholder="Email address">
+          <button class="btn" type="submit">Save settings</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Premium kids fashion in Nairobi</p>
+          <h1 id="heroHeading">Adorable outfits and happy little adventures.</h1>
+          <p id="heroDescription">Curated clothing, sneakers and accessories for babies, toddlers and growing kids — all available with fast WhatsApp ordering, flexible payments and joyful local service.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/254769582842">Order on WhatsApp</a>
+            <a class="btn-secondary" href="#products">Explore favorites</a>
+          </div>
+          <div class="trust-pills">
+            <span>⭐ New arrivals weekly</span>
+            <span>🚚 Fast local delivery</span>
+            <span>💳 M-Pesa ready</span>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="floating-badge">Fresh picks this week</div>
+          <div class="hero-stack">
+            <img src="image/set 1.jpeg" alt="A joyful kids outfit set">
+            <img src="image/addidas 1.jpeg" alt="Bright kids shoes">
+            <img src="image/innerwear.jpeg" alt="Cute kids accessories">
+          </div>
+          <div class="floating-badge bottom">Trusted by parents</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container service-strip reveal">
+      <div class="service-card">
+        <strong>Smart styling help</strong>
+        <p>We guide you to cute, comfy picks that suit your child’s age and occasion.</p>
+      </div>
+      <div class="service-card">
+        <strong>Quick order flow</strong>
+        <p>Tap a product and start your order in seconds through WhatsApp.</p>
+      </div>
+      <div class="service-card">
+        <strong>Comfort-first quality</strong>
+        <p>We focus on durable, easy-to-wear essentials parents love.</p>
+      </div>
+    </section>
+
+    <section id="products" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">Shop the collection</p>
+        <h2 class="section-title">Curated favorites for every little style</h2>
+        <p class="section-copy">Browse the latest outfits, footwear and accessories by mood, category or price. Every product is just one tap away from WhatsApp ordering.</p>
+      </div>
+      <div class="toolbar reveal">
+        <label class="search-box" for="searchInput">
+          <span>🔎</span>
+          <input id="searchInput" type="search" placeholder="Search products or accessories">
+        </label>
+        <div class="filter-group" id="filterGroup">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <button class="filter-btn" data-filter="Outfits">Outfits</button>
+          <button class="filter-btn" data-filter="Shoes">Shoes</button>
+          <button class="filter-btn" data-filter="Accessories">Accessories</button>
+          <button class="filter-btn" data-filter="Bundles">Bundles</button>
+        </div>
+      </div>
+      <div id="productsGrid" class="product-grid"></div>
+    </section>
+
+    <section class="section container">
+      <div class="promo-grid">
+        <div class="panel reveal">
+          <p class="eyebrow">Why parents love us</p>
+          <h3 class="section-title">A premium experience without the fuss</h3>
+          <p class="section-copy">From easy browsing to fast confirmation, every visit is designed to feel smooth, polished and personal. We combine local trust with modern shopping convenience.</p>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <strong>100+</strong>
+              <span>happy orders</span>
+            </div>
+            <div class="stat-box">
+              <strong>4.9/5</strong>
+              <span>parent satisfaction</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <p class="eyebrow">Style match quiz</p>
+          <h3 class="section-title">Find a look in under a minute</h3>
+          <form id="quizForm" class="quiz-form">
+            <select id="ageSelect" title="Choose age group" required>
+              <option value="">Select age group</option>
+              <option value="Baby">Baby</option>
+              <option value="Toddler">Toddler</option>
+              <option value="Big kid">Big kid</option>
+            </select>
+            <select id="moodSelect" title="Choose a mood" required>
+              <option value="">Choose a vibe</option>
+              <option value="Playful">Playful</option>
+              <option value="Comfort">Comfort-focused</option>
+              <option value="Elegant">Elegant</option>
+            </select>
+            <input id="budgetInput" type="number" min="200" step="50" placeholder="Budget in KSh" required>
+            <button class="btn" type="submit">Show my match</button>
+          </form>
+          <div id="quizResult">We’ll suggest a product based on the mood, age and budget you choose.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2 class="section-title">A peek at the joyful details</h2>
+      </div>
+      <div class="product-grid reveal">
+        <article class="card">
+          <img src="image/addidas%201.jpeg" alt="Bright kids sneakers" loading="lazy" decoding="async">
+          <div class="card-body">
+            <span class="badge">New</span>
+            <h3>Comfort-first sneakers</h3>
+            <p>Lightweight everyday shoes with color and bounce.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="image/set%201.jpeg" alt="Coordinated kids outfit" loading="lazy" decoding="async">
+          <div class="card-body">
+            <span class="badge">Best seller</span>
+            <h3>Coordinated sets</h3>
+            <p>Matching prints for easy dressing and beautiful photos.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="image/innerwear.jpeg" alt="Cute kids accessories" loading="lazy" decoding="async">
+          <div class="card-body">
+            <span class="badge">Cute picks</span>
+            <h3>Accessories to finish the look</h3>
+            <p>Hairbands, socks and accents that bring everything together.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="image/akala.jpeg" alt="Value bundle for kids" loading="lazy" decoding="async">
+          <div class="card-body">
+            <span class="badge">Bundle</span>
+            <h3>Ready-to-go bundles</h3>
+            <p>Great value collections for gifting or quick outfit refreshes.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">About us</p>
+        <h2 class="section-title">Quality, warmth and a modern shopping journey</h2>
+        <p class="section-copy">At Zainah Kids Shop, we believe children deserve pieces that feel good, look great and help them move confidently through every day. We handpick styles that are colorful, practical and easy to order.</p>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">Reviews</p>
+        <h2 class="section-title">Parents say it best</h2>
+      </div>
+      <div class="testimonials-grid reveal">
+        <div class="testimonial">
+          <p>“The quality was even better than expected and the ordering was effortless. My daughter loved the outfit.”</p>
+          <strong>— Mary W.</strong>
+        </div>
+        <div class="testimonial">
+          <p>“The shoes fit perfectly and the WhatsApp communication was so smooth. I ordered again within days.”</p>
+          <strong>— Joy K.</strong>
+        </div>
+        <div class="testimonial">
+          <p>“So many cute options and brilliant value. It felt like a premium experience from start to finish.”</p>
+          <strong>— Aisha M.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section container">
+      <div class="order-card reveal">
+        <p class="eyebrow">How to order</p>
+        <h2 class="section-title">Three easy steps to your next favorite piece</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <strong>1. Pick a style</strong>
+            <p>Choose a look from the collection or ask for styling help.</p>
+          </div>
+          <div class="step">
+            <strong>2. Send your details</strong>
+            <p>Message us on WhatsApp with your preferred item and size.</p>
+          </div>
+          <div class="step">
+            <strong>3. Confirm and pay</strong>
+            <p>We help you finalize the order and arrange payment swiftly.</p>
+          </div>
+        </div>
+        <form id="contactForm" class="quiz-form">
+          <input id="nameInput" type="text" placeholder="Your name" required>
+          <input id="phoneInput" type="tel" placeholder="Phone number" required>
+          <input id="itemInput" type="text" placeholder="Product you want" required>
+          <textarea id="noteInput" rows="3" placeholder="Anything else we should know?"></textarea>
+          <button class="btn" type="submit">Request order</button>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let’s make shopping simple</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-card">
+          <h3>WhatsApp</h3>
+          <p><a id="whatsappText" href="https://wa.me/254769582842">+254 769 582 842</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p id="locationText">Utawala Benedicta, Nairobi</p>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p id="emailText">zainahkidsshop@gmail.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="floating-cart" id="floatingCart" type="button">🛒 <span id="cartCount">0</span></button>
+  <div class="toast" id="toast"></div>
+
+  <footer>
+    © 2026 Zainah Kids Shop. All rights reserved.
+  </footer>
+
+  <script>
+    const fallbackProducts = [
+      { id: 1, image: 'image/set 1.jpeg', title: 'Cozy Outfits', desc: 'Matching sets for easy, stylish dressing', price: 1200, category: 'Outfits', featured: true, badge: 'Best seller', stock: 8 },
+      { id: 2, image: 'image/addidas 1.jpeg', title: 'Bright Sneakers', desc: 'Playful shoes built for comfort and style', price: 950, category: 'Shoes', featured: true, badge: 'New', stock: 4 },
+      { id: 3, image: 'image/innerwear.jpeg', title: 'Accessory Picks', desc: 'Trendy extras to complete any look', price: 450, category: 'Accessories', featured: true, badge: 'Cute picks', stock: 12 },
+      { id: 4, image: 'image/akala.jpeg', title: 'Perfect Bundles', desc: 'Value sets for happy kids and easy shopping', price: 2500, category: 'Bundles', featured: true, badge: 'Bundle', stock: 2 }
+    ];
+
+    const state = {
+      filter: 'All',
+      search: '',
+      cart: JSON.parse(localStorage.getItem('zainah-cart') || '[]'),
+      catalog: [],
+      adminAuthenticated: localStorage.getItem('zainah-admin-auth') === 'true'
+    };
+
+    const productsGrid = document.getElementById('productsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const filterGroup = document.getElementById('filterGroup');
+    const cartCount = document.getElementById('cartCount');
+    const floatingCart = document.getElementById('floatingCart');
+    const toast = document.getElementById('toast');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const quizForm = document.getElementById('quizForm');
+    const quizResult = document.getElementById('quizResult');
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    const adminTrigger = document.getElementById('adminTrigger');
+    const adminShell = document.getElementById('adminShell');
+    const adminLoginCard = document.getElementById('adminLoginCard');
+    const adminDashboard = document.getElementById('adminDashboard');
+    const adminLoginForm = document.getElementById('adminLoginForm');
+    const adminLoginMessage = document.getElementById('adminLoginMessage');
+    const adminLogoutBtn = document.getElementById('adminLogoutBtn');
+    const productForm = document.getElementById('productForm');
+    const resetProductBtn = document.getElementById('resetProductBtn');
+    const adminProductList = document.getElementById('adminProductList');
+    const adminOrdersList = document.getElementById('adminOrdersList');
+    const adminEnquiriesList = document.getElementById('adminEnquiriesList');
+    const adminSummary = document.getElementById('adminSummary');
+    const settingsForm = document.getElementById('settingsForm');
+    let editingProductId = null;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(showToast.timeout);
+      showToast.timeout = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    function persistCart() {
+      localStorage.setItem('zainah-cart', JSON.stringify(state.cart));
+      cartCount.textContent = state.cart.length;
+    }
+
+    function addToCart(product) {
+      if (Number(product.stock) <= 0) {
+        showToast(`${product.title} is currently sold out`);
+        return;
+      }
+      state.cart.push(product);
+      persistCart();
+      showToast(`${product.title} added to your quick list`);
+    }
+
+    function normalizeProduct(product, index) {
+      return {
+        id: product.id || index + 1,
+        title: product.title || product.name || 'Featured item',
+        desc: product.desc || product.description || 'Lovely kids essentials',
+        price: Number(product.price || 0),
+        image: product.image || 'image/akala.jpeg',
+        category: product.category || product.type || 'Accessories',
+        featured: Boolean(product.featured),
+        badge: product.badge || 'Featured',
+        stock: Number(product.stock || 0)
+      };
+    }
+
+    function getVisibleProducts() {
+      const query = state.search.toLowerCase();
+      return state.catalog.filter((product) => {
+        const matchesFilter = state.filter === 'All' || product.category === state.filter;
+        const matchesSearch = !query || `${product.title} ${product.desc}`.toLowerCase().includes(query);
+        return matchesFilter && matchesSearch;
+      });
+    }
+
+    function renderProducts() {
+      const visibleProducts = getVisibleProducts();
+      productsGrid.innerHTML = '';
+
+      if (!visibleProducts.length) {
+        productsGrid.innerHTML = '<div class="empty-state">No products match that search yet. Try another keyword or category.</div>';
+        return;
+      }
+
+      visibleProducts.forEach((product) => {
+        const article = document.createElement('article');
+        article.className = 'card reveal';
+        const waTextOrder = encodeURIComponent(`Hi! I would love to order ${product.title}. Please confirm price and delivery details.`);
+        const isSoldOut = Number(product.stock) <= 0;
+
+        article.innerHTML = `
+          <img src="${product.image}" alt="${product.title}" loading="lazy" decoding="async">
+          <div class="card-body">
+            <span class="badge ${isSoldOut ? 'soldout' : ''}">${isSoldOut ? 'Sold out' : product.badge}</span>
+            <h3>${product.title}</h3>
+            <p>${product.desc}</p>
+            <div class="card-footer">
+              <span class="price">KSh ${product.price.toLocaleString()}</span>
+              <span>${product.category}</span>
+            </div>
+            <div class="card-actions">
+              <button class="mini-btn primary add-btn" ${isSoldOut ? 'disabled' : ''}>${isSoldOut ? 'Sold out' : 'Add to quick list'}</button>
+              <a class="mini-btn" href="https://wa.me/254769582842?text=${waTextOrder}">${isSoldOut ? 'Enquire' : 'Order'}</a>
+            </div>
+          </div>`;
+
+        article.querySelector('.add-btn').addEventListener('click', () => {
+          addToCart(product);
+        });
+
+        article.querySelector('a').addEventListener('click', async (event) => {
+          event.preventDefault();
+          await saveOrder({
+            productId: product.id,
+            title: product.title,
+            price: product.price,
+            source: 'product-card-order',
+            note: 'Order from product card'
+          });
+          window.location.href = event.currentTarget.href;
+        });
+
+        productsGrid.appendChild(article);
+      });
+    }
+
+    async function saveOrder(order) {
+      try {
+        await fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(order)
+        });
+      } catch (err) {
+        console.warn('Could not save order request', err);
+      }
+    }
+
+    async function saveEnquiry(data) {
+      try {
+        await fetch('/api/enquiries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (err) {
+        console.warn('Could not save enquiry', err);
+      }
+    }
+
+    async function loadProducts() {
+      state.catalog = fallbackProducts.map(normalizeProduct);
+      renderProducts();
+
+      try {
+        const res = await fetch('/api/products');
+        if (res.ok) {
+          const products = await res.json();
+          state.catalog = (Array.isArray(products) && products.length ? products : fallbackProducts).map(normalizeProduct);
+          renderProducts();
+        }
+      } catch (err) {
+        console.warn('Could not load products from API, using local catalog', err);
+      }
+    }
+
+    async function loadSettings() {
+      try {
+        const res = await fetch('/api/settings');
+        if (res.ok) {
+          const settings = await res.json();
+          document.getElementById('heroHeading').textContent = settings.heroTitle || document.getElementById('heroHeading').textContent;
+          document.getElementById('heroDescription').textContent = settings.heroDescription || document.getElementById('heroDescription').textContent;
+          document.getElementById('whatsappText').textContent = settings.whatsapp || document.getElementById('whatsappText').textContent;
+          document.getElementById('locationText').textContent = settings.location || document.getElementById('locationText').textContent;
+          document.getElementById('emailText').textContent = settings.email || document.getElementById('emailText').textContent;
+          document.getElementById('settingsHeroTitle').value = settings.heroTitle || '';
+          document.getElementById('settingsHeroDesc').value = settings.heroDescription || '';
+          document.getElementById('settingsWhatsapp').value = settings.whatsapp || '';
+          document.getElementById('settingsLocation').value = settings.location || '';
+          document.getElementById('settingsEmail').value = settings.email || '';
+        }
+      } catch (err) {
+        console.warn('Could not load settings', err);
+      }
+    }
+
+    function resetProductForm() {
+      productForm.reset();
+      editingProductId = null;
+      document.getElementById('productCategory').value = 'Outfits';
+    }
+
+    function setAdminMode(isLoggedIn) {
+      adminLoginCard.hidden = isLoggedIn;
+      adminDashboard.hidden = !isLoggedIn;
+      adminShell.hidden = false;
+    }
+
+    function hideAdminPanel() {
+      adminShell.hidden = true;
+      adminLoginCard.hidden = false;
+      adminDashboard.hidden = true;
+    }
+
+    function showAdminMessage(message, isError = false) {
+      adminLoginMessage.textContent = message;
+      adminLoginMessage.style.color = isError ? '#c33' : 'var(--pink-dark)';
+    }
+
+    async function loadAdminData() {
+      try {
+        const [productsRes, ordersRes, enquiriesRes, settingsRes] = await Promise.all([
+          fetch('/api/admin/products'),
+          fetch('/api/admin/orders'),
+          fetch('/api/admin/enquiries'),
+          fetch('/api/admin/settings')
+        ]);
+        const products = productsRes.ok ? await productsRes.json() : fallbackProducts;
+        const orders = ordersRes.ok ? await ordersRes.json() : [];
+        const enquiries = enquiriesRes.ok ? await enquiriesRes.json() : [];
+        const settings = settingsRes.ok ? await settingsRes.json() : {};
+
+        state.catalog = (Array.isArray(products) && products.length ? products : fallbackProducts).map(normalizeProduct);
+        renderProducts();
+        renderAdminProducts(products);
+        renderSummary(products, orders, enquiries);
+        renderOrders(orders);
+        renderEnquiries(enquiries);
+
+        document.getElementById('settingsHeroTitle').value = settings.heroTitle || '';
+        document.getElementById('settingsHeroDesc').value = settings.heroDescription || '';
+        document.getElementById('settingsWhatsapp').value = settings.whatsapp || '';
+        document.getElementById('settingsLocation').value = settings.location || '';
+        document.getElementById('settingsEmail').value = settings.email || '';
+      } catch (err) {
+        console.warn('Could not load admin data', err);
+      }
+    }
+
+    function renderSummary(products, orders, enquiries) {
+      const outOfStock = products.filter((product) => Number(product.stock) <= 0).length;
+      adminSummary.innerHTML = `
+        <div class="stat-box"><strong>${products.length}</strong><span>Products</span></div>
+        <div class="stat-box"><strong>${outOfStock}</strong><span>Sold out</span></div>
+        <div class="stat-box"><strong>${orders.length}</strong><span>Orders</span></div>
+        <div class="stat-box"><strong>${enquiries.length}</strong><span>Enquiries</span></div>`;
+    }
+
+    function renderAdminProducts(products) {
+      adminProductList.innerHTML = '';
+      if (!products.length) {
+        adminProductList.innerHTML = '<div class="admin-item">No products yet.</div>';
+        return;
+      }
+      const list = document.createElement('div');
+      list.className = 'admin-list';
+      products.forEach((product) => {
+        const row = document.createElement('div');
+        row.className = 'admin-item';
+        row.innerHTML = `
+          <strong>${product.title}</strong>
+          <div class="small">${product.category} · stock: ${product.stock} · price: KSh ${Number(product.price || 0).toLocaleString()}</div>
+          <div class="admin-actions">
+            <button data-edit="${product.id}" type="button">Edit</button>
+            <button data-delete="${product.id}" type="button">Delete</button>
+          </div>`;
+        list.appendChild(row);
+      });
+      adminProductList.appendChild(list);
+
+      adminProductList.querySelectorAll('[data-edit]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const id = Number(button.getAttribute('data-edit'));
+          const product = products.find((item) => item.id === id);
+          if (product) {
+            editingProductId = id;
+            document.getElementById('productTitle').value = product.title || '';
+            document.getElementById('productDesc').value = product.desc || '';
+            document.getElementById('productPrice').value = product.price || 0;
+            document.getElementById('productCategory').value = product.category || 'Outfits';
+            document.getElementById('productStock').value = product.stock || 0;
+            document.getElementById('productImage').value = product.image || '';
+            document.getElementById('productBadge').value = product.badge || '';
+            document.getElementById('productFeatured').checked = Boolean(product.featured);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        });
+      });
+
+      adminProductList.querySelectorAll('[data-delete]').forEach((button) => {
+        button.addEventListener('click', async () => {
+          const id = Number(button.getAttribute('data-delete'));
+          await fetch(`/api/admin/products/${id}`, { method: 'DELETE' });
+          await loadAdminData();
+        });
+      });
+    }
+
+    function renderOrders(orders) {
+      adminOrdersList.innerHTML = '';
+      if (!orders.length) {
+        adminOrdersList.innerHTML = '<div class="admin-item">No orders yet.</div>';
+        return;
+      }
+      const list = document.createElement('div');
+      list.className = 'admin-list';
+      orders.slice().reverse().forEach((order) => {
+        const row = document.createElement('div');
+        row.className = 'admin-item';
+        row.innerHTML = `<strong>${order.title}</strong><div class="small">Order #${order.id} · ${order.phone || 'No phone'} · KSh ${Number(order.price || 0).toLocaleString()}</div><div class="small">${order.note || 'No note'}</div>`;
+        list.appendChild(row);
+      });
+      adminOrdersList.appendChild(list);
+    }
+
+    function renderEnquiries(enquiries) {
+      adminEnquiriesList.innerHTML = '';
+      if (!enquiries.length) {
+        adminEnquiriesList.innerHTML = '<div class="admin-item">No enquiries yet.</div>';
+        return;
+      }
+      const list = document.createElement('div');
+      list.className = 'admin-list';
+      enquiries.slice().reverse().forEach((enquiry) => {
+        const row = document.createElement('div');
+        row.className = 'admin-item';
+        row.innerHTML = `<strong>${enquiry.item}</strong><div class="small">${enquiry.name} · ${enquiry.phone}</div><div class="small">${enquiry.note || 'No detail'}</div>`;
+        list.appendChild(row);
+      });
+      adminEnquiriesList.appendChild(list);
+    }
+
+    searchInput.addEventListener('input', (event) => {
+      state.search = event.target.value;
+      renderProducts();
+    });
+
+    filterGroup.addEventListener('click', (event) => {
+      const button = event.target.closest('.filter-btn');
+      if (!button) return;
+      document.querySelectorAll('.filter-btn').forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      state.filter = button.dataset.filter;
+      renderProducts();
+    });
+
+    quizForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const age = document.getElementById('ageSelect').value;
+      const mood = document.getElementById('moodSelect').value;
+      const budget = Number(document.getElementById('budgetInput').value || 0);
+      const match = fallbackProducts.find((product) => {
+        if (product.category === 'Shoes' && age === 'Toddler' && mood === 'Playful') return true;
+        if (product.category === 'Outfits' && age === 'Big kid' && mood === 'Elegant') return true;
+        if (product.category === 'Accessories' && budget <= 700) return true;
+        if (product.category === 'Bundles' && budget >= 1800) return true;
+        return false;
+      }) || fallbackProducts[0];
+      quizResult.innerHTML = `<strong>We recommend:</strong> ${match.title} — ${match.desc}. It fits a ${age.toLowerCase()} ${mood.toLowerCase()} vibe and stays within your budget range.`;
+    });
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const name = document.getElementById('nameInput').value.trim();
+      const phone = document.getElementById('phoneInput').value.trim();
+      const item = document.getElementById('itemInput').value.trim();
+      const note = document.getElementById('noteInput').value.trim();
+      if (!name || !phone || !item) {
+        formMessage.textContent = 'Please fill in your name, phone and the product you want.';
+        return;
+      }
+
+      await saveEnquiry({
+        name,
+        phone,
+        item,
+        note,
+        source: 'contact-form'
+      });
+      formMessage.textContent = 'Thanks! Your request has been recorded and we will follow up shortly.';
+      contactForm.reset();
+    });
+
+    adminLoginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const username = document.getElementById('adminUsername').value.trim();
+      const password = document.getElementById('adminPassword').value;
+      try {
+        const res = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          showAdminMessage(data.message || 'Invalid credentials', true);
+          return;
+        }
+        state.adminAuthenticated = true;
+        localStorage.setItem('zainah-admin-auth', 'true');
+        setAdminMode(true);
+        await loadAdminData();
+        showAdminMessage('Welcome back, Makini.');
+      } catch (err) {
+        showAdminMessage('Could not reach the admin service.', true);
+      }
+    });
+
+    adminLogoutBtn.addEventListener('click', () => {
+      state.adminAuthenticated = false;
+      localStorage.removeItem('zainah-admin-auth');
+      setAdminMode(false);
+      adminLoginForm.reset();
+      showAdminMessage('You are logged out.');
+    });
+
+    productForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const payload = {
+        title: document.getElementById('productTitle').value.trim(),
+        desc: document.getElementById('productDesc').value.trim(),
+        price: Number(document.getElementById('productPrice').value || 0),
+        category: document.getElementById('productCategory').value,
+        stock: Number(document.getElementById('productStock').value || 0),
+        image: document.getElementById('productImage').value.trim() || 'image/akala.jpeg',
+        badge: document.getElementById('productBadge').value.trim() || 'New',
+        featured: document.getElementById('productFeatured').checked
+      };
+      const method = editingProductId ? 'PUT' : 'POST';
+      const url = editingProductId ? `/api/admin/products/${editingProductId}` : '/api/admin/products';
+      await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      resetProductForm();
+      await loadAdminData();
+      showToast('Product saved successfully');
+    });
+
+    resetProductBtn.addEventListener('click', resetProductForm);
+
+    settingsForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const payload = {
+        heroTitle: document.getElementById('settingsHeroTitle').value.trim(),
+        heroDescription: document.getElementById('settingsHeroDesc').value.trim(),
+        whatsapp: document.getElementById('settingsWhatsapp').value.trim(),
+        location: document.getElementById('settingsLocation').value.trim(),
+        email: document.getElementById('settingsEmail').value.trim()
+      };
+      await fetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      await loadSettings();
+      showToast('Site settings updated');
+    });
+
+    adminTrigger.addEventListener('click', async () => {
+      if (state.adminAuthenticated) {
+        setAdminMode(true);
+        await loadAdminData();
+      } else {
+        setAdminMode(false);
+      }
+    });
+
+    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    floatingCart.addEventListener('click', () => {
+      window.location.href = '#order';
+      showToast('Jumped to the order section');
+    });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      persistCart();
+      await loadProducts();
+      await loadSettings();
+      if (state.adminAuthenticated) {
+        setAdminMode(true);
+        await loadAdminData();
+      } else {
+        hideAdminPanel();
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    });
+  </script>
+</body>
+</html>
